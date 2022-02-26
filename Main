@@ -1,4 +1,31 @@
-for i in range(5):
-GIR    print(i)
+from random import randint
+
+print('Привет, поиграем? Y/N')
 
 
+def plays():
+    s = input()
+    if s.lower() == 'y':
+        summ()
+    elif s.lower() == 'n':
+        print("До новых встреч")
+    else:
+        print("Не понял тебя")
+        plays()
+
+
+def summ():
+    a = randint(1, 100)
+    b = randint(1, 100)
+    print(f'{a}+{b} = ?')
+    n = int(input())
+    if a + b == n:
+        print("Правильно")
+        print("Поиграем еще? Y/N")
+        plays()
+    else:
+        print('Непавильно, попробуешь снова Y/N?')
+        plays()
+
+
+plays()
