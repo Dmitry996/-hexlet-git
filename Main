@@ -27,5 +27,6 @@ def summ():
         print('Непавильно, попробуешь снова? Y/N')
         plays()
 
-
+def passt():
+    pass
 plays()
